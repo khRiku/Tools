@@ -1,0 +1,7 @@
+F:\Project\my\Tool\Tool\Tool\obj\Debug\Tool.csprojAssemblyReference.cache
+F:\Project\my\Tool\Tool\Tool\obj\Debug\Tool.csproj.CoreCompileInputs.cache
+F:\Project\my\Tool\Tool\Tool\bin\Debug\Tool.exe.config
+F:\Project\my\Tool\Tool\Tool\bin\Debug\Tool.exe
+F:\Project\my\Tool\Tool\Tool\bin\Debug\Tool.pdb
+F:\Project\my\Tool\Tool\Tool\obj\Debug\Tool.exe
+F:\Project\my\Tool\Tool\Tool\obj\Debug\Tool.pdb
