@@ -43,6 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileData.cs" />
+    <Compile Include="Litjson\IJsonWrapper.cs" />
+    <Compile Include="Litjson\JsonData.cs" />
+    <Compile Include="Litjson\JsonException.cs" />
+    <Compile Include="Litjson\JsonMapper.cs" />
+    <Compile Include="Litjson\JsonMockWrapper.cs" />
+    <Compile Include="Litjson\JsonReader.cs" />
+    <Compile Include="Litjson\JsonWriter.cs" />
+    <Compile Include="Litjson\Lexer.cs" />
+    <Compile Include="Litjson\Netstandard15Polyfill.cs" />
+    <Compile Include="Litjson\ParserToken.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
