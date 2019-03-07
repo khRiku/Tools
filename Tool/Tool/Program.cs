@@ -13,7 +13,7 @@ using LitJson;
 /// 
 /// 格式替换和转换工具
 /// 作用：用来备份代码的
-/// 使用方法， 把生成的exe放于要处理的文件夹下， 会在文件夹的中新建一个文件夹_XXX 来存放转换的代码
+/// 使用方法， 在 main 函数的 mCurDiretory 变量设置要处理的文件夹， 就会在该文件夹下生成一个.cs 文件
 /// 操作：
 ///     转换： 按文件夹位置进行转换后进行存放
 ///     替换： 用备份的文件替换掉原本的文件
@@ -61,9 +61,6 @@ namespace Tool
 
                 Console.WriteLine("请输入{0}/{1}/{2}", tTransform, tReplace, tDiretory);
             }
-
-            Console.WriteLine("请输入目录地址：");
-      //      mCurDiretory = Console.ReadLine();
 
             Option tOption = (Option)Enum.Parse(typeof(Option), tOptionStr);
             switch(tOption)
