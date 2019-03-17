@@ -41,7 +41,7 @@ namespace Tool
         {
             //工作路径设置
             mCurDiretory = Environment.CurrentDirectory;
-            mCurDiretory = @"E:\github\Tools\Tool\Tool\Class";
+            mCurDiretory = @"C:\Users\Administrator\Desktop\新建文件夹 (5)\新建文件夹";
 
 
             string tTransform = Option.t.ToString();
@@ -150,7 +150,7 @@ namespace Tool
             Console.WriteLine("恢复结构开始 ... ... ");
             {
                 string tDataPath = mCurDiretory + "\\" + mAllFileName;
-                string tData = File.ReadAllText(tDataPath);
+                string tData = File.ReadAllText(tDataPath, Encoding.GetEncoding("gb2312"));
                 if (string.IsNullOrEmpty(tData))
                 {
                     Console.WriteLine("错误：读取内容为空， 请确保该文件是否存在 路径 = " + tDataPath);
@@ -172,7 +172,7 @@ namespace Tool
                     string tFolderPath = tSavePath.Remove(tLastSperatIndex, tSavePath.Length - tLastSperatIndex);
                     if (Directory.Exists(tFolderPath) == false)
                         Directory.CreateDirectory(tFolderPath);
-                    File.WriteAllText(tSavePath, tOneFileData.mContent);
+                    File.WriteAllText(tSavePath, tOneFileData.mContent, Encoding.GetEncoding("gb2312"));
                 }
             }
             Console.WriteLine("恢复结构成功结束 ");
@@ -209,7 +209,7 @@ namespace Tool
                     if (Directory.Exists(tFolderPath) == false)
                         Directory.CreateDirectory(tFolderPath);
                     
-                    File.WriteAllText(tSavePath, tOneFileData.mContent);
+                    File.WriteAllText(tSavePath, tOneFileData.mContent, Encoding.GetEncoding("gb2312"));
                 }
             }            
             Console.WriteLine("文件替换结束 ");
