@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfBasics"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="400">
+        Title="Wpf Basics" Height="800" Width="400">
     <Border Padding="10">
         <StackPanel>
             <!-- Buttons -->
@@ -16,7 +16,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Margin="0 0 10 0" Grid.Column="0"  Content= "Apply" />
+                <Button x:Name ="ApplyButton" Click="ApplyButton_Click"  Margin="0 0 10 0" Grid.Column="0"  Content= "Apply" />
                 <Button Grid.Column="1"  Content= "Reset" />
                 <Button Margin="10 0 0 0"  Grid.Column="2"  Content= "Refresh" />
                 
@@ -26,7 +26,7 @@
             
             <!-- Description  -->
             <TextBlock Text="Description" />
-            <TextBox Padding="2"/>
+            <TextBox x:Name="DescriptionText" Padding="2"/>
 
             <!-- Status and Revision -->
             <Grid>
@@ -62,7 +62,72 @@
             <TextBlock Text="Manufaction Info" FontWeight="Bold" Margin="0 10" />
 
             <!-- Work Centres -->
-            <TextBlock Text="Work Centres" />
+            <TextBlock Text="Work Centres" Margin="0 0 0 10 "/>
+            
+            <!-- CheckBoxes -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width ="*"></ColumnDefinition>
+                    <ColumnDefinition Width ="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <!-- Column 1 -->
+                <StackPanel Grid.Column="0">
+                    <CheckBox Content="Weld"></CheckBox>
+                    <CheckBox Content="Assembly"></CheckBox>
+                    <CheckBox Content="Plasma"></CheckBox>
+                    <CheckBox Content="Laser"></CheckBox>
+                    <CheckBox Content="Purchase"></CheckBox>
+                </StackPanel>
+                
+                <!-- Column 2 -->
+                <StackPanel Grid.Column="1">
+                    <CheckBox Content="Lathe"></CheckBox>
+                    <CheckBox Content="Drill"></CheckBox>
+                    <CheckBox Content="Roll"></CheckBox>
+                    <CheckBox Content="Laser"></CheckBox>
+                    <CheckBox Content="Saw"></CheckBox>
+                </StackPanel>
+            </Grid>
+
+            <!-- Length -->
+            <TextBlock Text="Length" Margin="0 10 0 0" />
+            <TextBox Padding="2" />
+            
+            <!-- Mass -->
+            <TextBlock Text="Mass" Margin="0 10 0 0"></TextBlock>
+            <TextBox Text="lalalla" IsReadOnly="True" Background="#eee" Padding ="2"></TextBox>
+
+            <!-- Finish -->
+            <TextBlock Text="Finish" Margin="0 10 0 0"></TextBlock>
+            <ComboBox SelectedIndex="0" Padding ="2">
+                <ComboBoxItem Content="Painted"></ComboBoxItem>
+                <ComboBoxItem Content="Not Painted"></ComboBoxItem>
+            </ComboBox>
+
+            <!-- Purchase Information -->
+            <TextBlock Text="Purchase Information" Margin="0 10 0 0"></TextBlock>
+            <ComboBox SelectedIndex="0" Padding ="2">
+                <ComboBoxItem Content="Rubber"></ComboBoxItem>
+                <ComboBoxItem Content="Not Rubber"></ComboBoxItem>
+            </ComboBox>
+
+            <!-- Suppplier Name  -->
+            <TextBlock Text="Suppplier Name" Margin="0 10 0 0"/>
+            <TextBox Padding="2"/>
+
+            <!-- Suppplier Code  -->
+            <TextBlock Text="Suppplier Code" Margin="0 10 0 0" />
+            <TextBox Padding="2"/>
+
+
+            <!-- Addtional Info -->
+            <TextBlock Text="Addtional Info" FontWeight="Bold" Margin="0 10 0 0" />
+
+            <!--  Note  -->
+            <TextBlock Text="Note" Margin="0 10 0 0" />
+            <TextBox Padding="2"/>
+
         </StackPanel>
     </Border>
 </Window>
