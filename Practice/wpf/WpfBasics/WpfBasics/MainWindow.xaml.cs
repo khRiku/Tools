@@ -27,7 +27,26 @@ namespace WpfBasics
 
 		private void ApplyButton_Click(object sender, RoutedEventArgs e)
 		{
-			MessageBox.Show("Hi");
+			MessageBox.Show($"The description is:{this.DescriptionText.Text}");
+		}
+
+		private void ResetButton_Click(object sender, RoutedEventArgs e)
+		{
+			this.WeldCheckBox.IsChecked = false;
+		}
+
+		private void Checkbox_Checked(object sender, RoutedEventArgs e)
+		{
+			this.LengthText.Text += ((CheckBox) sender).Content;
+		}
+
+		private void FinishDropdown_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			if (this.NoteText == null)
+				return;
+
+			ComboBoxItem combo= ((ComboBox)sender).SelectedValue as ComboBoxItem;
+			this.NoteText.Text = combo.Content as string;
 		}
 	}
 }
