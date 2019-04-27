@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -42,11 +43,21 @@ namespace WpfBasics
 
 		private void FinishDropdown_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			if (this.NoteText == null)
-				return;
+			//if (this.NoteText == null)
+			//	return;
 
 			ComboBoxItem combo= ((ComboBox)sender).SelectedValue as ComboBoxItem;
 			this.NoteText.Text = combo.Content as string;
+		}
+
+		private void Window_Loaded(object sender, RoutedEventArgs e)
+		{
+			FinishDropdown_SelectionChanged(this.FinishDropdown, null);
+		}
+
+		private void SupplierNameText_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			this.MassText.Text = this.SupplierNameText.Text;
 		}
 	}
 }
