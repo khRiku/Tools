@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <TextBox Height="20" Margin="0,0,10,87" BorderThickness="1"
+                 Text="{Binding ElementName=slider1,Path=Value, UpdateSourceTrigger=PropertyChanged}" 
+         />
+        <Slider Maximum="100" Margin="0,50,0,35" Name="slider1"/>
+
+        <TextBox x:Name ="textbox1" Height="20" Margin="0,0,10,87" BorderThickness="1"               
+        />
+        <Slider Maximum="100" Margin="0,50,0,35" Name="slider2"/>
+    </StackPanel>
+</Window>
