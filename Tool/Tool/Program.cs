@@ -41,7 +41,7 @@ namespace Tool
         {
             //工作路径设置
             mCurDiretory = Environment.CurrentDirectory;
-            mCurDiretory = @"C:\Users\Administrator\Desktop\新建文件夹 (5)\新建文件夹";
+            mCurDiretory = @"C:\Users\Administrator\Desktop\新建文件夹 (4)\新建文件夹";
 
 
             string tTransform = Option.t.ToString();

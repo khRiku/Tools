@@ -12,8 +12,9 @@
          />
         <Slider Maximum="100" Margin="0,50,0,35" Name="slider1"/>
 
-        <TextBox x:Name ="textbox1" Height="20" Margin="0,0,10,87" BorderThickness="1"               
-        />
+        <TextBox x:Name ="textbox1" Height="20" Margin="0,0,10,87" BorderThickness="1"/>
         <Slider Maximum="100" Margin="0,50,0,35" Name="slider2"/>
+        
+
     </StackPanel>
 </Window>
