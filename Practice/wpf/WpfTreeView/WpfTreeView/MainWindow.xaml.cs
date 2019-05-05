@@ -52,7 +52,6 @@ namespace WpfTreeView
 				};
 
 
-
 				// Add a dummy item
 				item.Items.Add(null);
 
@@ -112,7 +111,6 @@ namespace WpfTreeView
 					Tag = filePath,
 				};
  
-				WpfTreeView.HeadToImageConverter.
 
 				subItem.Items.Add(null);
 
@@ -164,7 +162,7 @@ namespace WpfTreeView
 		/// </summary>
 		/// <param name="directoryPath"></param>
 		/// <returns></returns>
-		private object GetFileFolderName(string path)
+		public static object GetFileFolderName(string path)
 		{
 			// C:Somethin\a folder
 			//c:\Something\a file.png
