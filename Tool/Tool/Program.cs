@@ -128,13 +128,13 @@ namespace Tool
 
                     OneFileData tOneFileData = new OneFileData();
                     tOneFileData.mRelativePath = tFileInfo.FullName.Replace(mCurDiretory, "");
-                    tOneFileData.mContent = File.ReadAllText(tFileInfo.FullName);
+                    tOneFileData.mContent = File.ReadAllText(tFileInfo.FullName, Encoding.GetEncoding("gb2312"));
 
                     tAllFileData.mOneFileDataList.Add(tOneFileData);
                 }
             }
 
-            File.WriteAllText(mCurDiretory + "\\" + mAllFileName, JsonMapper.ToJson(tAllFileData));
+            File.WriteAllText(mCurDiretory + "\\" + mAllFileName, JsonMapper.ToJson(tAllFileData),  Encoding.GetEncoding("gb2312"));
             Console.WriteLine("格式转换成功结束 ");
 
         }
