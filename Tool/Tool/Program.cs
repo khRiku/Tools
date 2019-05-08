@@ -105,7 +105,9 @@ namespace Tool
         {
             ".cs",
             ".shader",
-            ".txt"
+            ".txt",
+			".xaml",
+				
         };
 
         /// <summary>
